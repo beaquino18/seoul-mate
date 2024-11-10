@@ -3,21 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Seoul-Mate</title>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
+
   <div class="container">
     <header class="border-bottom lh-1 py-3">
       <div class="row flex-nowrap justify-content-between align-items-center">
         <div class="col-4 pt-1">
-          <a class="link-secondary" href="#">Subscribe</a>
+          <a class="link-secondary" href="subscribe.html">Subscribe</a>
         </div>
         <div class="col-4 text-center">
           <a class="blog-header-logo text-body-emphasis text-decoration-none" href="#"><img id="icon" src="images/seoul-icon.png"></a>
@@ -26,7 +25,7 @@
           <a class="link-secondary" href="#" aria-label="Search">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img" viewBox="0 0 24 24"><title>Search</title><circle cx="10.5" cy="10.5" r="7.5"></circle><path d="M21 21l-5.2-5.2"></path></svg>
           </a>
-          <a class="btn btn-sm btn-outline-secondary" href="#">Sign up</a>
+          <a class="btn btn-sm btn-outline-secondary sign-up-text" href="sign-up.html">Sign up</a>
         </div>
       </div>
     </header>
@@ -34,11 +33,11 @@
     <!-- NAVBAR -->
     <div class="nav-scroller py-1 mb-3 border-bottom">
       <nav class="nav nav-underline justify-content-md-center">
-        <a class="nav-item nav-link link-body-emphasis active" href="#">Home</a>
-        <a class="nav-item nav-link link-body-emphasis" href="#">South Korea</a>
-        <a class="nav-item nav-link link-body-emphasis" href="#">Cuisine</a>
-        <a class="nav-item nav-link link-body-emphasis" href="#">Culture</a>
-        <a class="nav-item nav-link link-body-emphasis" href="#">Kdramas</a>
+        <a class="nav-item nav-link link-body-emphasis nav-bar-text active " href="#">Home</a>
+        <a class="nav-item nav-link link-body-emphasis nav-bar-text" href="#">South Korea</a>
+        <a class="nav-item nav-link link-body-emphasis nav-bar-text" href="#">Cuisine</a>
+        <a class="nav-item nav-link link-body-emphasis nav-bar-text" href="#">Culture</a>
+        <a class="nav-item nav-link link-body-emphasis nav-bar-text" href="#">Kdramas</a>
       </nav>
     </div>
   </div>
@@ -51,8 +50,7 @@
       <div class="carousel-item active">
         <a href="https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=87740" target="_blank"><img src="..." class="d-block w-100 palace" alt="..."></a>
         <div class="carousel-caption d-none d-md-block">
-          <h5 class="title">First slide label</h5>
-          <p>Some representative placeholder content for the first slide.</p>
+          <div class="title"><a href='https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=87740' target="_blank">Gyeongbokgung Palace</a></div>
         </div>
       </div>
 
@@ -60,8 +58,7 @@
       <div class="carousel-item">
         <img src="..." class="d-block w-100 tower" alt="...">
         <div class="carousel-caption d-none d-md-block">
-          <h5>First slide label</h5>
-          <p>Some representative placeholder content for the first slide.</p>
+          <div class="title"><a href='https://www.nseoultower.co.kr/eng/' target="_blank">N Seoul Tower</a></div>
         </div>
       </div>
 
@@ -69,11 +66,12 @@
       <div class="carousel-item">
         <img src="..." class="d-block w-100 village" alt="...">
         <div class="carousel-caption d-none d-md-block">
-          <h5>First slide label</h5>
-          <p>Some representative placeholder content for the first slide.</p>
+          <div class="title"><a href='https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=97932' target="_blank">Bukchon Hanok Village</a></div>
         </div>
       </div>
     </div>
+
+    <!-- CAROUSEL BUTTONS -->
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
@@ -95,10 +93,14 @@
         <!-- FIRST THUMBNAIL -->
         <div class="col">
           <div class="card shadow-sm">
+            <div class="image-container">
             <img class="bd-placeholder-img card-img-top" src="images/gimbap.jpg" alt="gimbap">
-              <text class="hello-text" x="50%" y="50%" fill="#eceeef" dy=".3em" text-anchor="middle">Hello</text></img>
+            <div class="overlay">
+              <a class="text" href="recipes/recipe-gimbap.html">Kimbap</a>
+            </div>
+          </div>
             <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text">Korean dish that is rice wrapped in seaweed filled with a variety of ingredients.</p>
               <div class="d-flex justify-content-between align-items-center">
               </div>
             </div>
@@ -108,10 +110,14 @@
         <!-- SECOND THUMBNAIL -->
         <div class="col">
           <div class="card shadow-sm">
+            <div class="image-container">
             <img class="bd-placeholder-img card-img-top" src="images/ramyun.jpg" alt="Ramyun">
-              <text class="hello-text" x="50%" y="50%" fill="#eceeef" dy=".3em" text-anchor="middle">Hello</text></img>
+            <div class="overlay">
+              <a class="text-stew" href="recipes/recipe-ramen.html">Budae Jjigae<br/>(Army Stew)</a>
+          </div>
+          </div>
             <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text">Budae Jjigae is a Korean fusion stew that incorporates American style processed food such as spam, sausages, canned baked beans and sliced cheese.</p>
               <div class="d-flex justify-content-between align-items-center">
               </div>
             </div>
@@ -121,60 +127,131 @@
         <!-- THIRD THUMBNAIL -->
         <div class="col">
           <div class="card shadow-sm">
+            <div class="image-container">
             <img class="bd-placeholder-img card-img-top" src="images/bulgogi.jpg" alt="Bulgogi">
-              <text class="hello-text" x="50%" y="50%" fill="#eceeef" dy=".3em" text-anchor="middle">Hello</text></img>
+            <div class="overlay">
+              <a class="text" href="recipes/recipe-bulgogi.html">Bulgogi</a>
+          </div>
+            </div>
             <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text">Bulgogi translates to "fire meat" and it's a recipe consists of grilled meat, rice and mix of vegetables </p>
               <div class="d-flex justify-content-between align-items-center">
               </div>
             </div>
           </div>
         </div>
-
        
       </div>
     </div>
   </div>
-  
-  <div class="modal modal-sheet position-static d-block bg-body-secondary p-4 py-md-5" tabindex="-1" role="dialog" id="modalSignin">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content rounded-4 shadow">
-        <div class="modal-header p-5 pb-4 border-bottom-0">
-          <h1 class="fw-bold mb-0 fs-2">Sign up for free</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+
+      <!-- Section: Links -->
+      <section class="mt-5">
+        <!-- Grid row-->
+        <div class="row text-center d-flex justify-content-center footer-row">
+          <!-- Grid column -->
+          <div class="col-md-2">
+            <h6 class="text-uppercase font-weight-bold">
+              <a href="#!" class="text-white">About</a>
+            </h6>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2">
+            <h6 class="text-uppercase font-weight-bold">
+              <a href="#!" class="text-white">Visit</a>
+            </h6>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2">
+            <h6 class="text-uppercase font-weight-bold">
+              <a href="#!" class="text-white">Travel</a>
+            </h6>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2">
+            <h6 class="text-uppercase font-weight-bold">
+              <a href="#!" class="text-white">Watch</a>
+            </h6>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2">
+            <h6 class="text-uppercase font-weight-bold">
+              <a href="#!" class="text-white">Sing</a>
+            </h6>
+          </div>
+          <!-- Grid column -->
         </div>
-  
-        <div class="modal-body p-5 pt-0">
-          <form class="">
-            <div class="form-floating mb-3">
-              <input type="email" class="form-control rounded-3" id="floatingInput" placeholder="name@example.com">
-              <label for="floatingInput">Email address</label>
-            </div>
-            <div class="form-floating mb-3">
-              <input type="password" class="form-control rounded-3" id="floatingPassword" placeholder="Password">
-              <label for="floatingPassword">Password</label>
-            </div>
-            <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Sign up</button>
-            <small class="text-body-secondary">By clicking Sign up, you agree to the terms of use.</small>
-            <hr class="my-4">
-            <h2 class="fs-5 fw-bold mb-3">Or use a third-party</h2>
-            <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
-              <svg class="bi me-1" width="16" height="16"><use xlink:href="#twitter"></use></svg>
-              Sign up with Twitter
-            </button>
-            <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-3" type="submit">
-              <svg class="bi me-1" width="16" height="16"><use xlink:href="#facebook"></use></svg>
-              Sign up with Facebook
-            </button>
-            <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
-              <svg class="bi me-1" width="16" height="16"><use xlink:href="#github"></use></svg>
-              Sign up with GitHub
-            </button>
-          </form>
+        <!-- Grid row-->
+      </section>
+      <!-- Section: Links -->
+
+      <hr class="line"/>
+
+      <!-- Section: Text -->
+      <section class="">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-8">
+            <p>
+              South Korea is located in East Asia, on the southern half of the Korean Peninsula. It borders North Korea to the north, with the Sea of Japan to the east and the Yellow Sea to the west. Known for its technological innovation and rich cultural heritage, it is a leading global power in various industries.
+            </p>
+          </div>
         </div>
-      </div>
+      </section>
+
+
+      <hr class="line"/>
+
+      <!-- Section: Social -->
+      <section class="text-center mb-5">
+        <a href="" class="text-white me-4">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-github"></i>
+        </a>
+      </section>
+      
     </div>
-  </div>
+
+
+    <!-- Copyright -->
+    <div class="text-center p-3 copyright">
+      © 2024 Copyright 대한민국
+      <a class="text-white" href="#"></a>
+    </div>
+
+
+  </footer>
+  <!-- Footer -->
+
+
+  
+  
+ 
 
     
 </body>
