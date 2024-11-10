@@ -1,5 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
 #icon {
     width: 15%;
     height: auto;
     margin-left: 15px;
+}
+
+.nav-bar-colors {
+    color: #888
+}
+
+.header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-nav-bar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: white;
+}
+
+
+.recipe-container {
+    margin: auto;
+    border-radius: 10px;
+    border-style: solid;
+    width: 50%;
+    margin-top: 5%;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.recipe-icon {
+    max-width: 700px;
+    padding: 0 15px;
+}
+
+.recipe-icon, .cook-icon, .nutrition-icon, .review-icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.recipe-title {
+    font-family: "Alegreya SC";
+    font-size: clamp(5rem, 10vw, 6rem);
+    word-wrap: break-word;
+    color: #6cc3d5;
+}
+
+.info-icon{
+    width: clamp(1rem, 4vw, 2rem);
+    height: auto;
+    margin-left: 10px;
+}
+
+.vr-line {
+    border-left: 2px solid rgba(73, 73, 73, 0.336);
+    height: 4vh;    
+}
+
+.number {
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 1.5rem;
+    font-family: "Alegreya SC";
+    color: #ff7851;
+
+}
+.desc {
+    margin-right: 10px;
+}
+
+.youtube-video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    aspect-ratio: 100;
+}
+
+.youtube-video iframe {
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+}
+
+.ingredients, .instructions {
+    font-family: "Alegreya SC";
+    font-size: clamp(1rem, 3vw, 2rem    );
+    margin-left: 1rem;
+    word-wrap: break-word;
+    color: #f3969a;
+    margin-top: 2rem;
+}
+
+.list {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 1rem 0;  
+}
+
+.ins-list {
+    padding-left: 2rem;
+    margin: 1rem 0;
+    text-align: justify;
+}
+
+.checkbox-desc {
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    margin-bottom: 1rem;
+}
+
+.checkbox-desc:last-child {
+    margin-bottom: 0; 
+}
+
+.checkbox-desc p {
+    margin-left: 1rem;
+    margin-bottom: 0;
+    font-family: 'Lato';
+    font-size: 1rem;
+    line-height: 1.5; 
+}
+
+.desc, .checkbox-desc p, .ins-list {
+    color: #343a40;
+    font-family: 'Lato';
+}
+
+.checkbox-desc label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.checkbox-desc input[type="checkbox"] {
+    margin: 0;
+    width: 1.2em;  
+    height: 1.2em;
+    cursor: pointer; 
+}
+
+.footer {
+    margin-top: 2rem;
+    text-align: center;
+    padding: 1rem;
+    background-color: #20c997;
+
+}
+.copyright {
+    color: white;
 }
