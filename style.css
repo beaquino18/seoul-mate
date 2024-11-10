@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+.header-nav-bar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: white;
+}
+
+.palace, .tower, .village {
+    background-size: cover; 
+    background-position: center;
+    z-index: -2;
+    width: 100%;
+    height: auto;
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+
+.palace {
+    background-image: url('images/palace.jpg');
+}
+
+.tower {
+    background-image: url('images/tower.jpg'); 
+}
+
+.village {
+    background-image: url('images/hanbok-village.jpg'); 
+}
+
+#icon {
+    width: 15%;
+    height: auto;
+    margin-left: 15px;
+}
+
+.title {
+    font-family: "Alegreya SC";
+    text-align: center;
+    font-size: 50px;
+    a {
+        color: white;
+        text-shadow: 10rem red;
+        text-decoration: none;
+    }
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.3s ease;
+}
+
+.image-container:hover .overlay{
+    opacity: 1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(209, 214, 216, 0.8);
+
+}
+
+.text, .text-stew {
+    color: rgb(34, 34, 34);
+    font-size: 40px;
+    position: absolute;
+    text-align: center;
+    font-family: "Alegreya SC";
+    margin-right: 20%;
+    text-decoration: none;
+
+}
+
+.text {
+    top: 45%;
+    margin-left: 35%;
+    
+}
+
+.text:hover, .text-stew:hover {
+    background: rgb(255, 206, 103);
+
+}
+
+.text-stew {
+    top: 40%;
+    margin-left: 25%;
+}
+
+.link-secondary, .sign-up-text, .nav-bar-text, .card-text, .modal, .footer{
+    font-family: 'Lato'
+}
+
+
+.card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    padding: 1rem; 
+    margin-bottom: 0; 
+}
+
+.card-text {
+    flex-grow: 1; 
+    overflow: hidden; 
+}
+
+.footer {
+    background-color: rgb(86, 204, 157);
+    text-align: center;
+    color: white;
+
+}
+
+.footer-row {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+}
+
+.line {
+    padding-top: 1rem;
+    padding-bottom: 0;
+}
+
+.copyright {
+    background-color: rgba(0, 0, 0, 0.2)
+}
+
+.subs-link {
+    padding-left: 10rem;
+}
+
+.sign-up-link {
+    margin-right: 10rem;
+}
