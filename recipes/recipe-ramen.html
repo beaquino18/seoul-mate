@@ -97,32 +97,19 @@
           <li class="checkbox-desc"><label><input type="checkbox" class="ingredient-checkbox"><span class="ingredient-text">¼ cup canned baked beans (Optional)</span></label></li>
           <li class="checkbox-desc"><label><input type="checkbox" class="ingredient-checkbox"><span class="ingredient-text">12-16 sliced rice cakes (Optional)</span></label></li>
           <li class="checkbox-desc"><label><input type="checkbox" class="ingredient-checkbox"><span class="ingredient-text">1 slice of American cheese (Optional)</span></label></li>
-
-					
-
-
         </ul>
-        <script> 
-          const checkbox = 
-              document.getElementById("checkbox"); 
-          const textToCross = 
-              document.getElementById("text-strike"); 
-              checkbox.addEventListener("change", 
-              function () { 
-    
-                  // If checked, strike through  
-                  // the paragraph text 
-                  if (this.checked) { 
-                      textToCross.style.textDecoration = 
-                          "line-through"; 
-                  } 
-    
-                  // If unchecked, remove the strikethrough 
-                  else { 
-                      textToCross.style.textDecoration = "none"; 
-                  } 
-              }); 
-      </script> 
+        <script>
+          document.querySelectorAll('.ingredient-checkbox').forEach(checkbox => {
+              checkbox.addEventListener('change', function() {
+                  const textElement = this.parentElement.querySelector('.ingredient-text');
+                  if (this.checked) {
+                      textElement.classList.add('strikethrough');
+                  } else {
+                      textElement.classList.remove('strikethrough');
+                  }
+              });
+          });
+      </script>
       </div>
     </div>
 
