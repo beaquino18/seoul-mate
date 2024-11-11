@@ -72,43 +72,30 @@
       <div class="ingredients">Ingredients</div>
       <div class="ingredient-list">
         <ul class="list">
-          <li class="checkbox-desc"><label for="checkbox"> <input type="checkbox" id="checkbox"></label><p id="text-strike">1 pound of beef tenderloin, cut into thin slices ½ inch x 2 inches and ⅛ inch thick</p></li>
-          <li class="checkbox-desc">
-            <label><input type="checkbox" class="ingredient-checkbox">
-                <span class="ingredient-text">1/2 cup of crushed Korean pear (aka "Asian pear")</span>
-            </label>
-          </li>
-          <li class="checkbox-desc"><label for="checkbox"> <input type="checkbox" id="checkbox"></label><p id="text-strike">1/4 cup onion purée</p></li>
-          <li class="checkbox-desc"><label for="checkbox"> <input type="checkbox" id="checkbox"></label><p id="text-strike">4 cloves of minced garlic</p></li>
-          <li class="checkbox-desc"><label for="checkbox"> <input type="checkbox" id="checkbox"></label><p id="text-strike">1 teaspoon minced ginger</p></li>
-          <li class="checkbox-desc"><label for="checkbox"> <input type="checkbox" id="checkbox"></label><p id="text-strike">1 chopped green onion</p></li>
-          <li class="checkbox-desc"><label for="checkbox"> <input type="checkbox" id="checkbox"></label><p id="text-strike">2 tbs soy sauce</p></li>
-          <li class="checkbox-desc"><label for="checkbox"> <input type="checkbox" id="checkbox"></label><p id="text-strike">2 tbs brown sugar (or 1 tbs of brown sugar and 1½ tbs rice syrup)</p></li>
-          <li class="checkbox-desc"><label for="checkbox"> <input type="checkbox" id="checkbox"></label><p id="text-strike">a pinch of ground black pepper</p></li>
-          <li class="checkbox-desc"><label for="checkbox"> <input type="checkbox" id="checkbox"></label><p id="text-strike">1 tbs toasted toasted sesame oil</p></li>
-          <li class="checkbox-desc"><label for="checkbox"> <input type="checkbox" id="checkbox"></label><p id="text-strike">several thin slices of carrot</p></li>
+          <li class="checkbox-desc"><label><input type="checkbox" class="ingredient-checkbox"><span class="ingredient-text">1 pound of beef tenderloin, cut into thin slices ½ inch x 2 inches and ⅛ inch thick</span></label></li>
+          <li class="checkbox-desc"><label><input type="checkbox" class="ingredient-checkbox"><span class="ingredient-text">1/2 cup of crushed Korean pear (aka "Asian pear")</span></label></li>
+          <li class="checkbox-desc"><label><input type="checkbox" class="ingredient-checkbox"><span class="ingredient-text">1/4 cup onion purée</span></label></li>
+          <li class="checkbox-desc"><label><input type="checkbox" class="ingredient-checkbox"><span class="ingredient-text">4 cloves of minced garlic</span></label></li>
+          <li class="checkbox-desc"><label><input type="checkbox" class="ingredient-checkbox"><span class="ingredient-text">1 teaspoon minced ginger</span></label></li>
+          <li class="checkbox-desc"><label><input type="checkbox" class="ingredient-checkbox"><span class="ingredient-text">1 chopped green onion</span></label></li>
+          <li class="checkbox-desc"><label><input type="checkbox" class="ingredient-checkbox"><span class="ingredient-text">2 tbs soy sauce</span></label></li>
+          <li class="checkbox-desc"><label><input type="checkbox" class="ingredient-checkbox"><span class="ingredient-text">2 tbs brown sugar (or 1 tbs of brown sugar and 1½ tbs rice syrup)</span></label></li>
+          <li class="checkbox-desc"><label><input type="checkbox" class="ingredient-checkbox"><span class="ingredient-text">a pinch of ground black pepper</span></label></li>
+          <li class="checkbox-desc"><label><input type="checkbox" class="ingredient-checkbox"><span class="ingredient-text">1 tbs toasted toasted sesame oil</span></label></li>
+          <li class="checkbox-desc"><label><input type="checkbox" class="ingredient-checkbox"><span class="ingredient-text">several thin slices of carrot</span></label></li>
         </ul>
-        <script> 
-          const checkbox = 
-              document.getElementById("checkbox"); 
-          const textToCross = 
-              document.getElementById("text-strike"); 
-              checkbox.addEventListener("change", 
-              function () { 
-    
-                  // If checked, strike through  
-                  // the paragraph text 
-                  if (this.checked) { 
-                      textToCross.style.textDecoration = 
-                          "line-through"; 
-                  } 
-    
-                  // If unchecked, remove the strikethrough 
-                  else { 
-                      textToCross.style.textDecoration = "none"; 
-                  } 
-              }); 
-      </script> 
+        <script>
+          document.querySelectorAll('.ingredient-checkbox').forEach(checkbox => {
+              checkbox.addEventListener('change', function() {
+                  const textElement = this.parentElement.querySelector('.ingredient-text');
+                  if (this.checked) {
+                      textElement.classList.add('strikethrough');
+                  } else {
+                      textElement.classList.remove('strikethrough');
+                  }
+              });
+          });
+      </script>
       </div>
     </div>
 

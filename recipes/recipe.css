@@ -111,9 +111,12 @@
     margin: 1rem 0;  
 }
 
-.ins-list {
-    padding-left: 2rem;
-    margin: 1rem 0;
+.strikethrough {
+    text-decoration: line-through;
+}
+
+.ingredient-text{
+    padding-left: 1rem;
     text-align: justify;
 }
 
@@ -136,7 +139,7 @@
     line-height: 1.5; 
 }
 
-.desc, .checkbox-desc p, .ins-list {
+.desc, .checkbox-desc p, .ins-list, .ingredient-text {
     color: #343a40;
     font-family: 'Lato';
 }
